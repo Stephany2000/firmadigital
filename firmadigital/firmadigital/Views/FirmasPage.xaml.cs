@@ -161,9 +161,9 @@ namespace firmadigital.Views
             return response;
         }
 
-        private void btnlista_Clicked(object sender, EventArgs e)
+        private async void btnlista_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new FirmaLista());
         }
     }
 }
