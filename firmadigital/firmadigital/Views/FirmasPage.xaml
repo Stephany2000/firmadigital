@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="firmadigital.Views.FirmasPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <controls:SignaturePadView x:Name = "Pantalla"
+                             StrokeColor      = "Black"
+                             StrokeWidth      = "2"
+                             CaptionText      = "Firma Digital"
+                             CaptionFontSize  = "14"
+                             PromptText       = "X"
+                             PromptFontSize   = "16"
+                             BackgroundColor  = "White"
+                             HeightRequest="300"
+            />
+            
+            <Label Text="Nombre" FontAttributes="Bold"/>
+            <Entry x:Name="Nombre" Text=""/>
+            <Label Text="Descripcion" FontAttributes="Bold"/>
+            <Entry x:Name="Descripcion" Text=""/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                          <ColumnDefinition />
+                          <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Row="0" Grid.Column="0" />
+                <Button Grid.Row="0" Grid.Column="0" Text="Lista Firmas" x:Name="btnlista" VerticalOptions="Center" Clicked="btnlista_Clicked"></Button>
+
+                <BoxView Grid.Row="0"  Grid.Column="1" />
+                <Button Grid.Row="0" Grid.Column="1" Text="a SQLite" x:Name="btnguardar" Clicked="btnguardar_Clicked" VerticalOptions="Center"></Button>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
